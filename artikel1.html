@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel 1 - ActiveMind</title>
+    <link rel="stylesheet" href="artikel1Style.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul>
+                    <li role="menuitem"><a href="login.html" style="color: white; font-weight: bold;" tabindex="0">Login/Register</a></li>
+                    <li role="menuitem"><a href="p.bugar.html" style="color: white; font-weight: bold;" tabindex="0">Program Kebugaran</a></li>
+					<li role="menuitem"><a href="PMS.html" style="color: white; font-weight: bold;" tabindex="0">Menu Makanan Sehat</a></li>
+					<li role="menuitem"><a href="DM.html" style="color: white; font-weight: bold;" abindex="0">Dukungan Kesehatan Fisik dan Mental</a></li>
+					<li role="menuitem"><a href="Komunitas.html" style="color: white; font-weight: bold;" tabindex="0">Komunitas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo" aria-label="Logo">
+            <a href="Home.html">
+			<img src="ActiveMind.png" alt="ActiveMind Logo" class="logo-image"> 
+			</a>
+			<!-- Replace with your logo image -->
+        </div>
+    </header>
+	
+	<div class="container30">
+        
+            <h1>Terapi EMDR: Cara Kerja dan Manfaatnya</h1>
+                   
+        <section class="content30">
+            <h2>Apa itu EMDR?</h2>
+            <p>EMDR, yang merupakan singkatan dari Eye Movement Desensitization and Reprocessing, adalah terapi psikologis yang digunakan untuk mengobati trauma. Terapi ini membantu individu memproses pengalaman traumatis mereka dengan cara yang aman dan terkendali.</p>
+            <h2>Bagaimana Cara Kerja EMDR?</h2>
+            <ul>
+                <p>EMDR bertujuan menghilangkan pengaruh negatif dari memori, termasuk:</p>
+                <li>Mengidentifikasi pengalaman traumatis: Tahap awal melibatkan mengenali dan memahami peristiwa traumatis yang Anda alami.</li>
+                <li>Menargetkan emosi dan sensasi fisik: Anda akan diajak untuk fokus pada emosi dan sensasi fisik yang terkait dengan pengalaman traumatis tersebut.</li>
+                <li>Gerakan mata bilateral: Ini adalah ciri khas EMDR. Terapis akan memandu Anda mengikuti gerakan mata ke kanan dan kiri, mirip dengan gerakan mata saat Anda sedang bermimpi.</li>
+            </ul>
+			
+			<h2>Apa Kelebihan Menjalani EMDR?</h2>
+            <ul>
+                <p>EMDR memberikan manfaat bagi mereka yang pernah mengalami trauma, di antaranya:</p>
+                <li>Mengurangi stres dan kecemasan</li>
+                <li>Meningkatkan kemampuan menghadapi masalah</li>
+                <li>Mengembalikan rasa diri dan pandangan hidup</li>
+            </ul>
+            <h2>Siapa yang Sebaiknya Menjalani EMDR?</h2>
+            <ul>
+            <p>EMDR cocok untuk individu yang memiliki trauma, seperti:</p>
+                <li>Trauma serius</li>
+                <li>Kesulitan dalam situasi stres (PSTD)</li>
+                <li>Depresi</li>
+                <li>Serangan panik</li>
+            </ul>
+        </section>
+		
+        <div class="social-icons">
+		<p>Bagikan artikel ini:</p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Email</a>
+        </div>
+	</div>
+	
+	<footer>
+        <div class="location">
+            <span> Your Location (ALL) ^</span>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Media center</a>
+            <a href="#">About</a>
+            <a href="#">Sponsored membership</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Give a membership</a>
+        </div>
+		<div class="social-media">
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="li.png" alt="LinkedIn"></a>
+        </div>
+		
+		<p>&copy; 2025 PJKR 22D - GROUP 2</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        function toggleDropdown() {
+            const isShown = dropdownMenu.classList.toggle('show');
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
+
+        hamburger.addEventListener('click', toggleDropdown);
+
+        hamburger.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

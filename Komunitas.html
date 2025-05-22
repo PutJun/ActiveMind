@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunitas - ActiveMind</title>
+    <link rel="stylesheet" href="KomunitasStyle.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul>
+                    <li role="menuitem"><a href="login.html" style="color: white; font-weight: bold;" tabindex="0">Login/Register</a></li>
+                    <li role="menuitem"><a href="p.bugar.html" style="color: white; font-weight: bold;" tabindex="0">Program Kebugaran</a></li>
+					<li role="menuitem"><a href="PMS.html" style="color: white; font-weight: bold;" tabindex="0">Menu Makanan Sehat</a></li>
+					<li role="menuitem"><a href="DM.html" style="color: white; font-weight: bold;" abindex="0">Dukungan Kesehatan Fisik dan Mental</a></li>
+					<li role="menuitem"><a href="Komunitas.html" style="color: white; font-weight: bold;" tabindex="0">Komunitas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo" aria-label="Logo">
+            <a href="Home.html">
+			<img src="ActiveMind.png" alt="ActiveMind Logo" class="logo-image"> 
+			</a>
+			<!-- Replace with your logo image -->
+        </div>
+    </header>
+	
+	<div class="container25">
+        <div class="card">
+            <img src="jsc.jpg" alt="Memahami Duka">
+            <div class="card-content">
+                <span class="category">Jakarta</span>
+                <h2 class="title">Jakarta Swim Community</h2>
+                <p class="author">@jakartaswimcommunity | Komunitas Renang</p>
+                <a href="https://www.instagram.com/jakartaswimcommunity?igsh=enljamJ1b3JxZXZ5" class="read-more">Baca selengkapnya</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="isc.jpg" alt="Pentingnya Support System">
+            <div class="card-content">
+                <span class="category">Jakarta</span>
+                <h2 class="title">Indo Sweat Camp</h2>
+                <p class="author">@indosweatcamp | Komunitas Olahraga</p>
+                <a href="https://www.instagram.com/indosweatcamp?igsh=MTJudXE1OGp1Z20yeg==" class="read-more">Baca selengkapnya</a>
+            </div>
+        </div>
+		<div class="card">
+            <img src="ct.jpg" alt="Gaya Komunikasi">
+            <div class="card-content">
+                <span class="category">Jakarta Selatan</span>
+                <h2 class="title">Cegil Tennis</h2>
+                <p class="author">@cegil.tennis | Komunitas Tenis</p>
+                <a href="https://www.instagram.com/cegil.tennis?igsh=MTVibGNtZWFrMGRrMA==" class="read-more">Baca selengkapnya</a>
+            </div>
+        </div>
+    </div>
+	
+	<div class="container26">
+        <div class="card">
+            <img src="br.jpg" alt="Memahami Duka">
+            <div class="card-content">
+                <span class="category">Bekasi</span>
+                <h2 class="title">Bekasi Runners</h2>
+                <p class="author">@bekasi_runners | Komunitas Lari</p>
+                <a href="https://www.instagram.com/bekasirunners?igsh=MXZhdTIxdXY4YTQyMg==" class="read-more">Baca selengkapnya</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="bl.jpg" alt="Pentingnya Support System">
+            <div class="card-content">
+                <span class="category">Tangerang Selatan</span>
+                <h2 class="title">Bintaro Loop</h2>
+                <p class="author">@bintaroloop_official | Komunitas Sepeda</p>
+                <a href="https://www.instagram.com/bintaroloop_official?igsh=MTZoMXI3bTdheTEwaA==" class="read-more">Baca selengkapnya</a>
+            </div>
+        </div>
+		<div class="card">
+            <img src="cvc.jpg" alt="Gaya Komunikasi">
+            <div class="card-content">
+                <span class="category">Tangerang</span>
+                <h2 class="title">Citra Nusantara VolleyballClub</h2>
+                <p class="author">@cinusvc | Komunitas Bola Voli</p>
+                <a href="https://www.instagram.com/cinusvc?igsh=NTFqZGR3bTlkaXk0" class="read-more">Baca selengkapnya</a>
+            </div>
+        </div>
+    </div>
+	
+	<footer>
+        <div class="location">
+            <span> Your Location (ALL) ^</span>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Media center</a>
+            <a href="#">About</a>
+            <a href="#">Sponsored membership</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Give a membership</a>
+        </div>
+		<div class="social-media">
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="li.png" alt="LinkedIn"></a>
+        </div>
+		
+		<p>&copy; 2025 PJKR 22D - GROUP 2</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        function toggleDropdown() {
+            const isShown = dropdownMenu.classList.toggle('show');
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
+
+        hamburger.addEventListener('click', toggleDropdown);
+
+        hamburger.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

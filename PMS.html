@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pola Makan Sehat - ActiveMind</title>
+    <link rel="stylesheet" href="PMSStyle.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul>
+                    <li role="menuitem"><a href="login.html" style="color: white; font-weight: bold;" tabindex="0">Login/Register</a></li>
+                    <li role="menuitem"><a href="p.bugar.html" style="color: white; font-weight: bold;" tabindex="0">Program Kebugaran</a></li>
+					<li role="menuitem"><a href="PMS.html" style="color: white; font-weight: bold;" tabindex="0">Menu Makanan Sehat</a></li>
+					<li role="menuitem"><a href="DM.html" style="color: white; font-weight: bold;" abindex="0">Dukungan Kesehatan Fisik dan Mental</a></li>
+					<li role="menuitem"><a href="Komunitas.html" style="color: white; font-weight: bold;" tabindex="0">Komunitas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo" aria-label="Logo">
+            <a href="Home.html">
+			<img src="ActiveMind.png" alt="ActiveMind Logo" class="logo-image"> 
+			</a>
+			<!-- Replace with your logo image -->
+        </div>
+    </header>
+	
+	<!-- Kalimat Pembuka -->
+	<div class="pembuka">
+		<h1>~We Care, We Do, We Health~</h1>
+		<p>
+		Pola makan sehat tidak hanya membantu menjaga berat badan yang ideal, tetapi juga berperan penting dalam mencegah berbagai penyakit kronis seperti diabetes, hipertensi, dan penyakit jantung. dengan memilih makanan yang kaya akan nutrisi, seperti sayuran, buah-buahan, biji-bijian, dan protein tanpa lemak , kita dapat meningkatkan energi, memperbaiki suasana hati, dan mendukung sistem kekebalan tubuh. Mari bersama-sama memabangun kebiasaan makan yang lebih baik untuk masa depan yang lebih sehat!!!
+		</p>
+	</div>
+	
+	<hr class="my-5" style="margin-bottom: 20px"> <!-- Garis pemisah -->
+	
+	<!-- Menu Makan Sehat -->
+	<div class="container15">
+        <nav class="penelusuran">
+            <input type="text" placeholder="Cari resep..." class="search-bar">
+        </nav>
+		
+        <div class="recipe-card">
+		    <img src="dimsum.jpg" alt="Dimsum Rice Paper">
+            <h2><a href="DRP.html">Dimsum Rice Paper</a></h2>
+            <p>Rice paper • Paha ayam fillet • Telur • Wortel • Jagung • Saos tiram • Minyak wijen • Kaldu jamur • Garam • Lada • Bubuk bawang putih...</p>
+            <div class="details">
+                <span>30 menit</span>
+                <span>1 porsi</span>
+                <span>Chef Maharani</span>
+	        </div>
+        </div>
+		
+		<div class="recipe-card">
+            <img src="dori.jpg" alt="Dori Aglio Olio">
+            <h2><a href="DAA.html">Dori Aglio Olio</a></h2>
+            <p>Ikan Dori • Pasta Gandum • Jamur Champignon • Olive Oil • Parsley Bubuk • Bawang Putih • Garam • Lada • Bawah Putih Bubuk • Air Rebusan Pasta...</p>
+            <div class="details">
+                <span>30 menit</span>
+                <span>1 porsi</span>
+                <span>Dapur Junita</span>
+            </div>
+        </div>
+		
+		<div class="recipe-card">
+            <img src="ayamlh.jpg" alt="Ayam Lada Hitam">
+            <h2><a href="ALH.html">Ayam Lada Hitam</a></h2>
+            <p>Dada ayam fillet • Jahe • Kecap asin • Garam • Bawang putih • Bawang bombay • Air,secukupnya • Olive oil...</p>
+            <div class="details">
+                <span>30 menit</span>
+                <span>2 porsi</span>
+                <span>Epul Kuliner</span>
+            </div>
+        </div>
+    </div>
+		
+	
+	<footer>
+        <div class="location">
+            <span> Your Location (ALL) ^</span>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Media center</a>
+            <a href="#">About</a>
+            <a href="#">Sponsored membership</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Give a membership</a>
+        </div>
+		<div class="social-media">
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="li.png" alt="LinkedIn"></a>
+        </div>
+		<p>&copy; 2025 PJKR 22D - GROUP 2</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        function toggleDropdown() {
+            const isShown = dropdownMenu.classList.toggle('show');
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
+
+        hamburger.addEventListener('click', toggleDropdown);
+
+        hamburger.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

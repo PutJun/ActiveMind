@@ -1,0 +1,306 @@
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #D0DDD0;
+}
+
+header {
+    position: relative;
+    background-color: #213448;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center logo horizontally */
+    padding: 75px; /* space for hamburger */
+	margin-bottom: 55px;
+}
+
+
+
+
+/* Container for hamburger to position left */
+.hamburger-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+
+
+
+/* Hamburger icon styling */
+.hamburger {
+    cursor: pointer;
+    width: 28px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 3.5px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+
+
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    position: absolute;
+    top: 60px; /* Below header */
+    left: 20px;
+    background: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    width: 260px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px 0;
+}
+
+.dropdown-menu ul li {
+    padding: 14px 24px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.dropdown-menu ul li a {
+	text-decoration: none;
+}
+
+.dropdown-menu ul li:hover,
+.dropdown-menu ul li:focus {
+    background-color: #4a90e2;
+    outline: none;
+}
+
+
+
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-height: 150px; /* Adjust logo size */
+}
+
+
+
+/*Level Program Kebugaran*/
+.container12 {
+    max-width: auto;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+header h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+	background-attachment: fixed;
+}
+.menu ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	
+}
+
+.menu ul li a:hover {
+    color: white;
+}
+
+.classes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.class-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+	margin: 18px
+}
+.class-card img {
+    width: 100%;
+}
+
+.label1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff5733;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.label2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #1F7D53;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.label3 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #3674B5;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.label4 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #E195AB;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 a {
+	text-decoration: none;
+	color: black
+}
+
+.info h3 a:hover {
+	color: grey;
+}
+
+button {
+    margin-top: 30px;
+}
+
+.view-all {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-all:hover {
+	background-color: #0056b3; /* Biru Tua */
+}
+
+/* Atas footer */
+.location {
+    margin-bottom: 15px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+	text-decoration: none;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+	padding: 10px;
+}
+
+.links a:hover {
+    text-decoration: none;
+}
+
+.social-media {
+    display:relative;
+    gap: 10px;
+	padding: 10px;
+	text-decoration: none;
+	margin: 15px;
+}
+
+.social-media a img {
+    width: 24px; /* ukuran ikon sosial media */
+    height: 24px; /* ukuran ikon sosial media */
+}
+
+/* Footer styling */
+footer {
+    background-color: #213448;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+	margin-top: 30px;
+}
+
+
+
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 400px) {
+    header {
+        padding: 0 40px;
+    }
+    .dropdown-menu {
+        width: 200px;
+        left: 10px;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentingnya Support System - ActiveMind</title>
+    <link rel="stylesheet" href="artikel2Style.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul>
+                    <li role="menuitem"><a href="login.html" style="color: white; font-weight: bold;" tabindex="0">Login/Register</a></li>
+                    <li role="menuitem"><a href="p.bugar.html" style="color: white; font-weight: bold;" tabindex="0">Program Kebugaran</a></li>
+					<li role="menuitem"><a href="PMS.html" style="color: white; font-weight: bold;" tabindex="0">Menu Makanan Sehat</a></li>
+					<li role="menuitem"><a href="DM.html" style="color: white; font-weight: bold;" abindex="0">Dukungan Kesehatan Fisik dan Mental</a></li>
+					<li role="menuitem"><a href="Komunitas.html" style="color: white; font-weight: bold;" tabindex="0">Komunitas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo" aria-label="Logo">
+            <a href="Home.html">
+			<img src="ActiveMind.png" alt="ActiveMind Logo" class="logo-image"> 
+			</a>
+			<!-- Replace with your logo image -->
+        </div>
+    </header>
+	
+	<div class="container30">
+        
+            <h1>Pentingnya Support System</h1>
+                   
+        <section class="content30">
+            <h2>Support System? Apa itu?</h2>
+            <p>Cinta dan rasa memiliki (love and belongingness) merupakan kebutuhan manusia yang berada di tingkat ketiga dari lima tingkat yang ada pada teori Hirarki Kebutuhan Manusia oleh Maslow. Rasa cinta dan kasih sayang yang dimaksud dapat diperoleh seseorang dari interaksi sosial dengan orang-orang di sekitarnya, seperti keluarga, teman, rekan kerja, komunitas tempat ia tinggal, bahkan komunitas di dunia maya. Apabila seseorang merasa bahwa ia dicintai, disayangi, dan secara positif terlibat dalam kelompok tertentu, ia akan merasa lebih percaya diri, merasa berhak diperlakukan dengan baik oleh orang lain, dan merasa lebih yakin untuk mengeksplor dunia luar agar ia dapat berkembang sebagai manusia. Ia yakin jika ia terjatuh, ia bisa bangkit lagi dengan dukungan orang-orang di sekitarnya. Sebaliknya, apabila seseorang merasa tidak ada orang yang mendukung dan berpihak padanya di dunia ini, maka bisa jadi ia merasa kesepian secara kronis, merasa tidak berdaya karena tidak tahu harus mencari bantuan ke mana, dan aktualisasi dirinya pun menjadi terhambat.</p>
+            <h2>Perkuat Support System yang Sehat dengan cara berikut:</h2>
+            <p>Mengapa penting memiliki lebih dari satu pendukung dalam hidup kita? Sewajarnya manusia, pasti ada kalanya orang tersebut juga menghadapi kesulitan dalam hidup dan sedang tidak dalam keadaan yang prima untuk memberikan dukungan saat kita sedang membutuhkannya.</p>
+			<ul>
+                <li>Membangun variasi dari orang-orang yang terlibat dalam support system. Hal ini tidak terbatas pada keluaraga dan teman, karena tidak smeua orang memiliki keluaraga dan teman yang supportif. Orang-orang seperti mentor, guru, kenalan dari suatu komunitas hobi yang sama, dan profesional di bidang kesehatan mental merupakan variasi yang dapat dipertimbangkan dalam membangun support system.</li>
+                <li>Buat upaya untuk memelihara support system. hubungan merupakan interaksi dan upaya dua arah, di mana kadang kita menerima, kadang kita memberi.</li>
+                <li>Kenali ciri orang yang availlable secara emosional. Meminta dukungan kepada orang yang terbatas secara emosional akan melelahkan, sehingga ada baiknya kita juga memiliki orang-orang yang siap secara emosional sebagai bagian dari support system.</li>
+            </ul>
+        </section>
+		
+        <div class="social-icons">
+		<p>Bagikan artikel ini:</p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Email</a>
+        </div>
+	</div>
+	
+	<footer>
+        <div class="location">
+            <span> Your Location (ALL) ^</span>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Media center</a>
+            <a href="#">About</a>
+            <a href="#">Sponsored membership</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Give a membership</a>
+        </div>
+		<div class="social-media">
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="li.png" alt="LinkedIn"></a>
+        </div>
+		
+		<p>&copy; 2025 PJKR 22D - GROUP 2</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        function toggleDropdown() {
+            const isShown = dropdownMenu.classList.toggle('show');
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
+
+        hamburger.addEventListener('click', toggleDropdown);
+
+        hamburger.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

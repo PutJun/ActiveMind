@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimsum Rice Paper - ActiveMind</title>
+    <link rel="stylesheet" href="DRPStyle.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul>
+                    <li role="menuitem"><a href="login.html" style="color: white; font-weight: bold;" tabindex="0">Login/Register</a></li>
+                    <li role="menuitem"><a href="p.bugar.html" style="color: white; font-weight: bold;" tabindex="0">Program Kebugaran</a></li>
+					<li role="menuitem"><a href="PMS.html" style="color: white; font-weight: bold;" tabindex="0">Menu Makanan Sehat</a></li>
+					<li role="menuitem"><a href="DM.html" style="color: white; font-weight: bold;" abindex="0">Dukungan Kesehatan Fisik dan Mental</a></li>
+					<li role="menuitem"><a href="Komunitas.html" style="color: white; font-weight: bold;" tabindex="0">Komunitas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo" aria-label="Logo">
+            <a href="Home.html">
+			<img src="ActiveMind.png" alt="ActiveMind Logo" class="logo-image"> 
+			</a>
+			<!-- Replace with your logo image -->
+        </div>
+    </header>
+	
+	<!-- Menu Dimsum Rice Paper -->
+	<div class="container18">
+		<h1>Dimsum Rice Paper</h1>
+			<img src="dimsum.jpg" alt="Dimsum Rice Paper">
+			<h4>Bahan:</h4>
+				<ol class="bahan" menu="role">
+					<li>6 lembar Rice Paper</li>
+					<li>200 gram paha ayam fillet</li>
+					<li>1 butir telur</li>
+					<li>Wortel</li>
+					<li>Jagung</li>
+					<li>1 sdm saos tiram</li>
+					<li>1 sdt minyak wijen</li>
+					<li>1 sdt kaldu jamur </li>
+					<li>½ sdt garam</li>
+					<li>1 sdt lada</li>
+					<li>1 sdt bubuk bawang putih</li>
+				</ol>
+			<h4>Cara Memasak:</h4>
+				<ol class="memasak">
+					<li>1. 200 gram paha ayam fillet dan putih telur di blender</li>
+					<li>2. Campur ayam yang sudah di blender dengan wortel, jagung, bahan lainnya dan  aduk hingga rata</li>
+					<li>3. Rice papernya dipotong menjadi 4 bagian</li>
+					<li>4. Lalu basahkan rice paper dengan air</li>
+					<li>5. Lalu masukin bahan adonan dimsum dan dilipat</li>
+					<li>6. Lalu di kukus selama 15 – 20 menit</li>
+					<li>7. Lalu bisa di sajikan</li>
+				</ol>
+			<h4 class="note">Note: Makanan ini dapat menghasilkan kalori sebanyak 40 kkal/porsi</h4>
+	</div>
+		
+	
+	<footer>
+        <div class="location">
+            <span> Your Location (ALL) ^</span>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Media center</a>
+            <a href="#">About</a>
+            <a href="#">Sponsored membership</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Give a membership</a>
+        </div>
+		<div class="social-media">
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="li.png" alt="LinkedIn"></a>
+        </div>
+		<p>&copy; 2025 PJKR 22D - GROUP 2</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        function toggleDropdown() {
+            const isShown = dropdownMenu.classList.toggle('show');
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
+
+        hamburger.addEventListener('click', toggleDropdown);
+
+        hamburger.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

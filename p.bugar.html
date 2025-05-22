@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kebugaran - ActiveMind</title>
+    <link rel="stylesheet" href="bugarStyle.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul>
+                    <li role="menuitem"><a href="Login.html" style="color: white; font-weight: bold;" tabindex="0">Login/Register</a></li>
+                    <li role="menuitem"><a href="p.bugar.html" style="color: white; font-weight: bold;" tabindex="0">Program Kebugaran</a></li>
+					<li role="menuitem"><a href="PMS.html" style="color: white; font-weight: bold;" tabindex="0">Menu Makanan Sehat</a></li>
+					<li role="menuitem"><a href="DM.html" style="color: white; font-weight: bold;" abindex="0">Dukungan Kesehatan Fisik dan Mental</a></li>
+					<li role="menuitem"><a href="Komunitas.html" style="color: white; font-weight: bold;" tabindex="0">Komunitas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logo" aria-label="Logo">
+			<a href="Home.html">
+            <img src="ActiveMind.png" alt="ActiveMind Logo" class="logo-image">
+			</a>
+			<!-- Replace with your logo image -->
+        </div>
+    </header>
+	
+	<!-- Pembuatan Kolom Level Program Kebugaran -->
+	<div class="container12">
+        <header>
+            <h2>Ikuti 40+ variasi latihan kebugaran sepuasnya!!</h2>
+            <p>Dibimbing oleh instruktur berpengalaman dan bersertifikasi internasional.</p>
+        </header>
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Latihan Populer</a></li>
+                <li><a href="#">Cardio</a></li>
+                <li><a href="#">Dance</a></li>
+                <li><a href="#">Mind & Body</a></li>
+                <li><a href="#">Strength</a></li>
+            </ul>
+        </nav>
+	</div>
+		<section class="classes">
+            <div class="class-card strength">
+                <div class="label1">Strength</div>
+                <img src="bodypump.jpg" alt="BODYPUMP">
+                <div class="info">
+                    <p>Hard · 60 Min</p>
+                    <h3><a href="">BODYPUMP</a></h3>
+                </div>
+            </div>
+            <div class="class-card dance">
+                <div class="label2">Dance</div>
+                <img src="zumba.jpg" alt="ZUMBA">
+                <div class="info">
+                    <p>Easy · 60 Min</p>
+                    <h3><a href="">ZUMBA</a></h3>
+                </div>  
+            </div>      
+			<div class="class-card cardio">
+                <div class="label3">Cardio</div>
+                <img src="bodycombat.jpg" alt="BODYCOMBAT">
+                <div class="info">
+                    <p>Hard · 60 Min</p>
+                    <h3><a href="">BODYCOMBAT</a></h3>
+                </div>
+            </div>
+            <div class="class-card mind-body">
+                <div class="label4">Mind & Body</div>
+                <img src="hatha.jpg" alt="HATHA YOGA">
+                <div class="info">
+                    <p>Medium · 60 Min</p>
+                    <h3><a href="">HATHA YOGA</a></h3>
+                </div>
+            </div>
+        </section>
+		<button class="view-all" style="display: block; margin: auto">Lihat Semua Latihan</button>
+	
+	
+	<footer>
+        <div class="location">
+            <span> Your Location (ALL) ^</span>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Media center</a>
+            <a href="#">About</a>
+            <a href="#">Sponsored membership</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Give a membership</a>
+        </div>
+		<div class="social-media">
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="li.png" alt="LinkedIn"></a>
+        </div>
+		<p>&copy; 2025 PJKR 6D - GROUP 2</p>
+    </footer>
+	
+	
+
+	<script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        function toggleDropdown() {
+            const isShown = dropdownMenu.classList.toggle('show');
+            dropdownMenu.setAttribute('aria-hidden', !isShown);
+        }
+
+        hamburger.addEventListener('click', toggleDropdown);
+
+        hamburger.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>
